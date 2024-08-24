@@ -1,6 +1,21 @@
-# user-news-preferences-ux
+## BBC News Feed With User Interaction Statistic Generation
 
-This template should help get you started developing with Vue 3 in Vite.
+A scrollable modern news feed that creates statistics about the people who use it, using Tailwind, Vue, Dynamically scraped data via Cheerio, Request-Promise & fs (node native)
+
+## To Use This App
+
+Clone this repo
+install dependencies using npm or yarn (`npm install` or `yarn`)
+start app using `npm run dev` or `yarn dev`
+
+## About this App
+
+This App is created from a view point of showcasing good UX/UI principles across all browser and viewports, and creating useful data quickly with cheerio.
+
+side note:
+The data is purposefully not served via an API, but one could very easily be integrated. You could also schedule the scrape process using `node-cron` or something similar on an express server hourly. The package-json `scrape` script is what should be automated.
+
+VITE CONFIG
 
 ## Recommended IDE Setup
 
