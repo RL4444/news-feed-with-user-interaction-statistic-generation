@@ -1,0 +1,53 @@
+@import './base.css';
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  color: white;
+}
+
+a,
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+.max-w-content {
+  max-width: max-content !important;
+}
+
+.inner-shadow {
+  -webkit-box-shadow: inset 0px -12vw 14vw 12vh rgba(0, 0, 0, 1);
+  -moz-box-shadow: inset 0px -12vw 14vw 12vh rgba(0, 0, 0, 1);
+  box-shadow: inset 0px -12vw 14vw 12vh rgba(0, 0, 0, 1);
+}
+
+.darker-image {
+  -webkit-box-shadow: inset 2px -20vh 36vw 32vh rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 2px -20vh 36vw 32vh rgba(0, 0, 0, 0.75);
+  box-shadow: inset 2px -20vh 36vw 32vh rgba(0, 0, 0, 0.75);
+}
+
+@media screen and (max-width: 600px) {
+  .darker-image {
+    -webkit-box-shadow: inset 2px -50vw 36vw 65px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: inset 2px -50vw 36vw 65px rgba(0, 0, 0, 0.75);
+    box-shadow: inset 2px -50vw 36vw 65px rgba(0, 0, 0, 0.75);
+  }
+
+  .inner-shadow {
+    -webkit-box-shadow: inset 0px -12vw 5vw 12vh rgba(0, 0, 0, 1);
+    -moz-box-shadow: inset 0px -12vw 5vw 12vh rgba(0, 0, 0, 1);
+    box-shadow: inset 0px -32vw 25vw 7vh rgba(0, 0, 0, 1);
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .inner-shadow {
+    -webkit-box-shadow: inset 0px -12vw 14vw 2vh rgba(0, 0, 0, 1);
+    -moz-box-shadow: inset 0px -12vw 14vw 2vh rgba(0, 0, 0, 1);
+    box-shadow: inset 0px -12vw 14vw 2vh rgba(0, 0, 0, 1);
+  }
+}
