@@ -165,7 +165,6 @@ const getCurrentHeadlines = async () => {
       })
     })
   fs.writeFileSync(`./data-gen/bbc-news-${todaysDateFormatted}.json`, JSON.stringify({ data }))
-  fs.writeFileSync(`./src/__data/bbc-news-${todaysDateFormatted}.json`, JSON.stringify({ data }))
 }
 
 const sortDataForClient = async () => {
@@ -195,21 +194,32 @@ const sortDataForClient = async () => {
     }
   }
 
+  const removeDupes = (rawArray) => {
+    const filteredItems = []
+    rawArray.filter((eachItem) => {
+      if (!filteredItems.some((itemToCheck) => itemToCheck.id === eachItem.id)) {
+        filteredItems.push(eachItem)
+      }
+    })
+
+    return filteredItems
+  }
+
   fs.writeFileSync(
     `./src/__data/bbc-music.json`,
-    JSON.stringify({ data: music.flat().reverse(), count: music.flat().length })
+    JSON.stringify({ data: removeDupes(music.flat().reverse()), count: music.flat().length })
   )
   fs.writeFileSync(
     `./src/__data/bbc-news.json`,
-    JSON.stringify({ data: news.flat().reverse(), count: news.flat().length })
+    JSON.stringify({ data: removeDupes(news.flat().reverse()), count: news.flat().length })
   )
   fs.writeFileSync(
     `./src/__data/bbc-tv-film.json`,
-    JSON.stringify({ data: filmTv.flat().reverse(), count: filmTv.flat().length })
+    JSON.stringify({ data: removeDupes(filmTv.flat().reverse()), count: filmTv.flat().length })
   )
   fs.writeFileSync(
     `./src/__data/bbc-sport.json`,
-    JSON.stringify({ data: sport.flat().reverse(), count: sport.flat().length })
+    JSON.stringify({ data: removeDupes(sport.flat().reverse()), count: sport.flat().length })
   )
 }
 

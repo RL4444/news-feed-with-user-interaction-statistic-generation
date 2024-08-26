@@ -25,9 +25,9 @@ a,
 }
 
 .darker-image {
-  -webkit-box-shadow: inset 2px -20vh 36vw 32vh rgba(0, 0, 0, 0.75);
-  -moz-box-shadow: inset 2px -20vh 36vw 32vh rgba(0, 0, 0, 0.75);
-  box-shadow: inset 2px -20vh 36vw 32vh rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: inset 2px -25vw 36vw 65px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: inset 2px -25vw 36vw 65px rgba(0, 0, 0, 0.75);
+  box-shadow: inset 2px -25vw 36vw 65px rgba(0, 0, 0, 0.75);
 }
 
 @media screen and (max-width: 600px) {
