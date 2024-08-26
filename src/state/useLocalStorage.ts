@@ -19,7 +19,7 @@ type IUserState = {
     fav_checked: Array<string>
 }
 
-const DEFAULT_USER_PREFERENCES = {
+const DEFAULT_USER_PREFERENCES: IUserState = {
     fav_stories: [],
     weight_metrics: {
         "breaking news": 1,
