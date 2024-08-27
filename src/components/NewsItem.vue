@@ -3,18 +3,7 @@ import { ref, onMounted } from 'vue'
 import Tag from './Tag.vue'
 import { getCurrentState, updateState } from '../state/useLocalStorage'
 import { CaTime, CaStarFilled, CaStar } from '@kalimahapps/vue-icons'
-
-type TNewsItem = {
-    id: string
-    title: string
-    description?: string
-    url: string
-    imgSrc: string
-    imgSrcSet?: string
-    downloadedAt?: string
-    tag: string
-    imageId: string
-}
+import { type TNewsItem } from '../types/index'
 
 const toggleFavourite = () => {
     const userPreferences = getCurrentState();

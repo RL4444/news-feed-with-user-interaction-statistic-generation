@@ -1,17 +1,7 @@
 <script setup lang="ts">
 import { defineProps, ref, onMounted, onUnmounted } from 'vue'
+import {type TNewsItem} from '../types/index'
 import NewsItem from './NewsItem.vue'
-
-type TNewsItem = {
-  id: string
-  title: string
-  description?: string
-  url: string
-  imgSrc?: string
-  imgSrcSet?: string
-  downloadedAt?: string
-  tag: string
-}
 
 type TProps = {
   data: Array<TNewsItem>
@@ -59,6 +49,8 @@ onMounted(() => {
   const container = document.getElementById('news-container')
   container?.addEventListener('wheel', handleScroll)
   container?.addEventListener('scroll', checkScrollPosition)
+
+  console.log(props)
 
   loaded.value = true
 })

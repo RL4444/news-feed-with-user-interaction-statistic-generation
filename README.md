@@ -1,10 +1,11 @@
-## BBC News Feed With User Interaction Statistic Generation
+## BBC News Feed With User Tailored Feed and Useage Stats Generation
 
 A scrollable modern news feed that creates statistics about the people who use it, using Tailwind, Vue, Dynamically scraped data via Cheerio, Request-Promise & fs (node native)
 
 Using the metrics generates when a user 'favourites' a story or clicks 'read more', we give the user a mix of their favourite genre of news back in the tab `My Feed`.
 
-We also display the tags stats in the `/user-stats` route (the icon in the top left of the screen)
+TODO:
+Tags stats will be implemented in the `/user-stats` route (the icon in the top left of the screen)
 
 ## To Use This App
 
